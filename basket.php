@@ -70,7 +70,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Shopping Basket - Tyne Brew Coffee</title>
-    <link rel="stylesheet" href="/cturnbull/website/style.css">
+    <link rel="stylesheet" href="./style.css">
     <?php include 'navbar.php'; ?>
 </head>
 <body>
