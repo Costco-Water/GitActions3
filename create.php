@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception('Image upload failed: ' . $_FILES['image']['error']);
         }
 
-        $targetDir = "./";
+        $targetDir = "uploads/";
         if (!file_exists($targetDir)) {
             if (!mkdir($targetDir, 0777, true)) {
                 throw new Exception('Failed to create upload directory');
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception('Failed to upload image: ' . error_get_last()['message']);
         }
 
-        $imageUrl = './' . $targetFile;
+        $imageUrl = '/cturnbull/website/' . $targetFile;
 
         $conn = $db->connect();
         $stmt = $conn->prepare("
