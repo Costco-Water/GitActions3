@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception('Image upload failed: ' . $_FILES['image']['error']);
         }
 
-        $targetDir = "L5SW/Callum/";
+        $targetDir = "uploads/";
         if (!file_exists($targetDir)) {
             if (!mkdir($targetDir, 0777, true)) {
                 throw new Exception('Failed to create upload directory');
